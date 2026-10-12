@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ネット情報覚書</title>
+  <title>ネット情報覚書 — AIガチ勢が毎日やっている習慣 TOP10</title>
   <style>
     :root {
       color-scheme: light;
@@ -12,6 +12,7 @@
       --line: #d6d3d1;
       --paper: #fafaf9;
       --mark: #44403c;
+      --head: #f5f5f4;
     }
 
     * { box-sizing: border-box; }
@@ -26,7 +27,7 @@
     }
 
     main {
-      max-width: 44rem;
+      max-width: 52rem;
       margin: 0 auto;
       padding: 3rem 1.5rem 4rem;
     }
@@ -38,11 +39,11 @@
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.85rem;
       font-weight: 650;
-      letter-spacing: 0.04em;
-      line-height: 1.3;
-      margin: 0 0 0.75rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+      margin: 0 0 1rem;
     }
 
     .meta {
@@ -50,25 +51,25 @@
       margin: 0;
     }
 
-    .lead {
-      margin: 1.5rem 0 2rem;
-    }
+    .meta a { color: inherit; }
 
     h2 {
       font-size: 1.15rem;
       font-weight: 650;
       margin: 2.25rem 0 0.75rem;
-      padding-top: 0.25rem;
     }
 
     p { margin: 0.75rem 0; }
 
     ol, ul { margin: 0.75rem 0; padding-left: 1.4rem; }
-    li + li { margin-top: 0.35rem; }
+    li + li { margin-top: 0.45rem; }
+
+    .table-wrap { overflow-x: auto; }
 
     table {
       border-collapse: collapse;
       margin: 1rem 0;
+      min-width: 36rem;
       width: 100%;
     }
 
@@ -80,20 +81,22 @@
     }
 
     th {
-      background: #f5f5f4;
+      background: var(--head);
       font-weight: 650;
-      width: 8.5rem;
     }
 
-    .card {
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--mark);
-      margin: 1rem 0 0;
-      padding: 0.4rem 1rem 0.8rem;
+    td.rank {
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+      width: 4rem;
     }
 
-    .card ul { list-style: none; padding-left: 0; }
-    .card li { margin: 0.2rem 0; }
+    td.habit { width: 18rem; }
+
+    code {
+      font-family: "SFMono-Regular", "Source Code Pro", ui-monospace, monospace;
+      font-size: 0.9em;
+    }
 
     footer {
       border-top: 1px solid var(--line);
@@ -103,7 +106,45 @@
       padding-top: 1rem;
     }
 
-    a { color: inherit; }
+    footer a { color: inherit; }
+
+    @media (max-width: 40rem) {
+      .table-wrap { overflow: visible; }
+
+      table { min-width: 0; }
+
+      thead {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+
+      tr {
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        border-bottom: 1px solid var(--line);
+        padding: 0.65rem 0;
+      }
+
+      td {
+        border: 0;
+        min-width: 0;
+        padding: 0.1rem 0;
+        width: auto;
+      }
+
+      td.rank {
+        grid-row: 1 / span 2;
+        font-weight: 650;
+        text-align: left;
+      }
+
+      td.habit { font-weight: 650; }
+    }
 
     @media print {
       body { background: #fff; }
@@ -115,117 +156,109 @@
 <body>
   <main>
     <header>
-      <h1>ネット情報覚書</h1>
-      <p class="meta">作成日: 2026年10月12日<br>区分: 作業用</p>
+      <h1>AIガチ勢が毎日やっている習慣 TOP10</h1>
+      <p class="meta">
+        出典: <a href="https://youtu.be/MPWojezLvps">【必見】この習慣で劇的に人生が変わりました【特別公開】</a><br>
+        チャンネル: ここなのAI大学<br>
+        要約日: 2026-10-12
+      </p>
     </header>
 
-    <p class="lead">インターネット上で得た情報を、後日から出典つきで確認できるよう残すため、次のとおり定める。</p>
-
     <section>
-      <h2>第1条（目的）</h2>
-      <p>この覚書は、ウェブページ、公式発表、報道、データ、個人の投稿から得た情報を記録するときの項目と扱いを定める。URLだけの控えは、ページの消失や改訂で内容が再現できなくなるため、記録の単位にしない。</p>
+      <h2>概要</h2>
+      <p>AIを日常にどう取り入れるかが重要、という前提で、ココナ氏と周囲の「AIガチ勢」が実際にやっている習慣をランキング形式で紹介。情報収集・メモ・入力・並行作業・ツール自作まで、今日から真似できる実践法が中心。</p>
     </section>
 
     <section>
-      <h2>第2条（記録する事項）</h2>
-      <p>情報を採用し、または参考として残すときは、次の事項を一組にして記す。</p>
-      <table>
-        <thead>
-          <tr><th>事項</th><th>記載内容</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>タイトル</td><td>ページまたは記事の題名。題名がなければ、内容が分かる短い呼び名</td></tr>
-          <tr><td>URL</td><td>アドレス欄のURL。短縮URLの場合は、たどった先のURLも残す</td></tr>
-          <tr><td>確認日</td><td>そのページを開き、内容を確認した日付</td></tr>
-          <tr><td>情報の種類</td><td>公式発表、報道、個人の投稿、データ、解説、広告のうち、最も近いもの</td></tr>
-          <tr><td>要約</td><td>ページの主張を、自分の言葉で短く記したもの</td></tr>
-          <tr><td>根拠箇所</td><td>見出し、節、表、図の名前など、後から同じ箇所を探せる目印</td></tr>
-          <tr><td>扱い</td><td>「採用する」「参考にとどめる」「確認が必要」のいずれか</td></tr>
-          <tr><td>メモ</td><td>他の情報との差、更新の有無、次に確認すること</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>第3条（要約と引用）</h2>
-      <ol>
-        <li>要約は自分の言葉で書く。事実の記述と、自分の判断は分けて書く。</li>
-        <li>原文から抜く場合は、必要な短い一文にとどめ、出典と確認日を併記する。</li>
-        <li>ページ全文、有料記事の本文、歌詞、書籍の本文は写さない。</li>
-        <li>出典のない数字、および出典のない引用は、この覚書に載せない。</li>
-        <li>画面の写しを添えるときは、同じ記録に確認日とURLを書く。</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>第4条（情報の優先順位）</h2>
-      <ol>
-        <li>公式の発表および一次データを、報道や解説より先に当たる。</li>
-        <li>報道は、誰が、いつ、何を報じたかまで残す。</li>
-        <li>個人の投稿および匿名のまとめは、手がかりとして残し、事実の根拠にはしない。</li>
-        <li>広告、PR、アフィリエイトの表記があるページは、その旨を記録する。</li>
-        <li>生成された文章は、事実の出典にしない。元のページを開き、そのページを出典にする。</li>
-        <li>同じ話題に複数の情報があるときは、新しい公式情報を先に置く。古い記述は、その時点の記述であることが分かるように残す。</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>第5条（確認を要する記録）</h2>
-      <p>次のいずれかに当たる記録の扱いは、「確認が必要」とする。</p>
-      <ul>
-        <li>数字の単位、時点、対象範囲が書かれていない</li>
-        <li>他の一次情報と食い違う</li>
-        <li>投稿者または発行元が分からない</li>
-        <li>最終更新が古く、制度や仕様が変わり得る話題である</li>
-        <li>翻訳または要約だけで、原文を見ていない</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>第6条（保存）</h2>
-      <ol>
-        <li>記録は、この文書の「記録」に時系列で追記する。</li>
-        <li>開けなくなったURLは削除しない。「確認日の時点では開けた」ことと、その後の状態をメモに書く。</li>
-        <li>このHTMLは、<a href="./ネット情報覚書.md">Markdown版</a>と同じ条文とする。条文を改めたときは、両方を同じ内容に更新する。</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>第7条（改訂）</h2>
-      <p>この覚書は、記録の項目または扱いを変えるときに改訂し、改訂日と要旨を改訂履歴に残す。</p>
-    </section>
-
-    <section>
-      <h2>記録</h2>
-      <p>まだ記録はない。次の記録票を複製して、この節へ追記する。</p>
-      <div class="card">
-        <h3>記録票</h3>
-        <ul>
-          <li>タイトル:</li>
-          <li>URL:</li>
-          <li>確認日:</li>
-          <li>情報の種類:</li>
-          <li>扱い: 採用する / 参考にとどめる / 確認が必要</li>
-          <li>要約:</li>
-          <li>根拠箇所:</li>
-          <li>メモ:</li>
-        </ul>
+      <h2>習慣ランキング（要約）</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">順位</th>
+              <th scope="col">習慣</th>
+              <th scope="col">要点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">10</td>
+              <td class="habit">情報収集の自動化</td>
+              <td>Manus等のAIエージェントに定期タスクを任せ、毎朝AIニュース要約を受け取る</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td class="habit">インプットのポッドキャスト化</td>
+              <td>NotebookLMで資料を音声解説化し、通勤・家事中に聞く</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td class="habit">AIの得意分野別使い分け</td>
+              <td>文章→Claude、画像・Google連携→Gemini、PC作業自動化→Cursor。全部課金は不要</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td class="habit">複数AIの並列実行</td>
+              <td>画面分割や別タブでDeep Research・プロンプト生成・構成案などを同時進行</td>
+            </tr>
+            <tr>
+              <td class="rank">6</td>
+              <td class="habit">Obsidianでメモ</td>
+              <td>ローカルMarkdownなのでCursor等が直接読める。ナレッジ蓄積と相性が良い</td>
+            </tr>
+            <tr>
+              <td class="rank">5</td>
+              <td class="habit">音声入力の活用</td>
+              <td>Aqua Voice等で「えー」を除き文脈整形。入力速度が大きく上がる</td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td class="habit">バックグラウンド実行</td>
+              <td>タブを閉じても動くAI（例: Manus）に寝かせて処理。Deep Researchも放置向き</td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td class="habit">海外情報の収集</td>
+              <td>Xで一次情報を追う。翻訳＋検索コマンド（<code>lang:en</code>, <code>min_faves:</code>）で質を絞る</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td class="habit">日常会話のナレッジ化</td>
+              <td>会議・電話・雑談を録音→Gemini等で要約→Obsidian等に蓄積</td>
+            </tr>
+            <tr>
+              <td class="rank">1</td>
+              <td class="habit">必要なツールは自作</td>
+              <td>Cursor等で「欲しい機能」を日本語指示。Chrome拡張なども数分で作成可能</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section>
-      <h2>改訂履歴</h2>
-      <table>
-        <thead>
-          <tr><th>日付</th><th>要旨</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2026-10-12</td>
-            <td>初版。記録事項、要約と引用、優先順位、確認を要する記録、保存を定めた</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>課金の目安（動画時点・2026年2月頃）</h2>
+      <ul>
+        <li><strong>Claude Pro</strong> … 文章・台本向き（約$20/月）</li>
+        <li><strong>Google AI Pro</strong> … Gemini / NotebookLM / 画像生成など（約2,900円/月）</li>
+        <li><strong>Cursor Pro</strong> … ローカル作業自動化・ツール自作（約$20/月）</li>
+        <li>ChatGPTは当時解約。必要になったら再課金もあり、とのこと</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>実践のコツ（短く）</h2>
+      <ol>
+        <li><strong>待つ時間をゼロに</strong> … 並列実行・バックグラウンド・定期タスクを組み合わせる</li>
+        <li><strong>読む→聞く／話す</strong> … ポッドキャスト化と音声入力で時間を圧縮</li>
+        <li><strong>ナレッジをローカルに溜める</strong> … Obsidian＋録音要約で「自分専用の知識ベース」を作る</li>
+        <li><strong>合うツールがなければ作る</strong> … 探すより自作の発想へ</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>動画の結論</h2>
+      <p>完璧な正解は人それぞれ。まずはできそうな習慣から1つずつ取り入れる。詳細なロードマップは概要欄の公式LINE相談なども案内されている。</p>
     </section>
 
     <footer>
