@@ -27,7 +27,7 @@
     }
 
     main {
-      max-width: 48rem;
+      max-width: 52rem;
       margin: 0 auto;
       padding: 3rem 1.5rem 4rem;
     }
@@ -91,7 +91,7 @@
       width: 4rem;
     }
 
-    td.habit { width: 12.5rem; }
+    td.habit { width: 18rem; }
 
     code {
       font-family: "SFMono-Regular", "Source Code Pro", ui-monospace, monospace;
@@ -107,6 +107,44 @@
     }
 
     footer a { color: inherit; }
+
+    @media (max-width: 40rem) {
+      .table-wrap { overflow: visible; }
+
+      table { min-width: 0; }
+
+      thead {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+
+      tr {
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        border-bottom: 1px solid var(--line);
+        padding: 0.65rem 0;
+      }
+
+      td {
+        border: 0;
+        min-width: 0;
+        padding: 0.1rem 0;
+        width: auto;
+      }
+
+      td.rank {
+        grid-row: 1 / span 2;
+        font-weight: 650;
+        text-align: left;
+      }
+
+      td.habit { font-weight: 650; }
+    }
 
     @media print {
       body { background: #fff; }
